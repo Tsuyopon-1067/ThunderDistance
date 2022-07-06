@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+    <DebugType>none</DebugType>
+    <ApplicationIcon>ico\thunder.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="reset.png" />
+    <None Remove="sound.png" />
+    <None Remove="thunder.ico" />
+    <None Remove="thunder.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ico\thunder.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="DialogBoxForMaterialDesignToolkitInXaml" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="reset.png" />
+    <Resource Include="sound.png" />
+    <Resource Include="thunder.ico" />
+    <Resource Include="thunder.png" />
+  </ItemGroup>
+
+</Project>

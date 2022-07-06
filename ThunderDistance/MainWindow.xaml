@@ -1,0 +1,49 @@
+﻿<Window x:Class="ThunderDistance.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThunderDistance"
+        mc:Ignorable="d"
+        Icon="thunder.ico"
+        Title="ThunderDistance" Height="350" Width="560">
+    <UniformGrid Rows="4" Columns="1" Margin="0,20,0,0">
+        <Viewbox Stretch="Uniform" Margin="10">
+            <TextBlock x:Name="timeLabel" Text="00.00s 経過"  FontFamily="MS Gothic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#DD000000"/>
+        </Viewbox>
+        <Viewbox Stretch="Uniform" Margin="10">
+            <TextBlock x:Name="distLabel" Text="約0000.0m" FontFamily="MS Gothic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Foreground="#DD000000"/>
+        </Viewbox>
+        <Viewbox Stretch="Uniform">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Viewbox Stretch="Uniform">
+                    <TextBlock Text="音速[m/s]" FontFamily="MS Gothic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#DD000000"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform">
+                    <TextBox x:Name="mahaTBox" Text="340.0" TextChanged="TextChanged" FontFamily="MS Gothic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#DD000000"/>
+                </Viewbox>
+            </StackPanel>
+        </Viewbox>
+
+        <UniformGrid Columns="2" Margin="5">
+            <Button Click="StartButton_Click" Margin ="5,5,5,5" Background="#FF42A5F5" BorderBrush="#FF1565C0" Width="auto" Height="auto" Grid.Column="0" Cursor="Hand">
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="startBtnImage" Source="/thunder.png"/>
+                    <Viewbox Stretch="Uniform" Margin="2">
+                        <TextBlock x:Name="startButton" Text="Start" FontFamily="MS Gothic" FontWeight="Bold" Foreground="#EEffffff"/>
+                    </Viewbox>
+                </StackPanel>
+            </Button>
+            <Button Click="ResetButton_Click" Margin ="5,5,5,5" Background="#FF42A5F5" BorderBrush="#FF01579B" Width="auto" Height="auto" Grid.Column="1" Cursor="Hand">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/reset.png"/>
+                    <Viewbox Stretch="Uniform" Margin="2">
+                        <TextBlock x:Name="resetButton" Text="Reset" FontFamily="MS Gothic" FontWeight="Bold" VerticalAlignment="Center" Foreground="#EEffffff"/>
+                    </Viewbox>
+                </StackPanel>
+            </Button>
+        </UniformGrid>
+        <Image x:Name="soundImage" Source="/sound.png"/>
+        <Image x:Name="thunderImage" Source="/thunder.png"/>
+    </UniformGrid>
+</Window>
