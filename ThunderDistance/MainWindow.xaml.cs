@@ -54,13 +54,13 @@ namespace ThunderDistance
             if (_isStart)
             {
                 startButton.Text = "Stop";
-                startBtnImage.Source = thunderImage.Source;
+                startBtnImage.Source = soundImage.Source;
                 start();
             }
             else
             {
                 startButton.Text = "Start";
-                startBtnImage.Source = soundImage.Source;
+                startBtnImage.Source = thunderImage.Source;
                 stop();
             }
         }
