@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Threading;
 
 namespace ThunderDistance
 {
@@ -81,6 +82,7 @@ namespace ThunderDistance
             double dist = sDouble * _maha;
             int dot = (int)((dist - (int)dist) * 10) % 10;
             string str;
+            Thread.Sleep(10);
             if (s == 0 && dot == 0) str = string.Format($"約{(int)dist:0000}.{dot:d1}m");
             else
             {
